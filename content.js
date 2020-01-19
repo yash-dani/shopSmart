@@ -1,14 +1,14 @@
  var url = location.href; 
 
 
-if (url.includes("amazon.ca")){
-    if (url.includes("gp/cart")) {
+if (url.includes("www.amazon.ca")){
+    if (url.includes("gp/cart")){
         chrome.runtime.sendMessage({
             action: 'updateIcon',
             value: 0
         });
     } 
-    if (url.includes("gp/product") || url.includes("dp")) {
+    else if (url.includes("gp/product") || url.includes("dp")) {
 
     //disable buy now
 
@@ -27,8 +27,17 @@ if (url.includes("amazon.ca")){
            
          }else {//do nothing. This will fire if cancel is clicked.}
         } }
-
-    else {
+    else if (url.includes("gp/buy/spc")) {
+        var response = prompt("Enter 'This is not an impulse purchase'"); 
+        if (response ==="This is not an impulse purchase" ){
+            alert("Please preceed to place order"); 
+        } else {
+            window.open(
+                'https://www.amazon.ca/gp/cart/view.html?ref_=nav_cart',
+                "_self"
+              )
+        }
+    } else {
         chrome.runtime.sendMessage({
             action: 'updateIcon',
             value: 1
