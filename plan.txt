@@ -1,0 +1,17 @@
+Chrome extension
+Name in progress: ShopSmart
+
+Prevent impulse spending so that they can [...]
+
+Amazon only (for now)
+
+1) tracks sales and show previous sales (possible site to use: camelcamelcamel)
+
+2) budgeting
+
+3) recognize purchase page, possibly point out your budget 
+
+4) if youre about to do an impulse buy, wait a night on it OR make you type it out to yourself to opt out
+    (this might be a little invasivve so it can be disabled completely)
+
+5) eliminate buy now button on amazon
