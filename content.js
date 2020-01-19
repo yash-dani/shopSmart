@@ -8,7 +8,7 @@ if (url.includes("amazon.ca")){
             value: 0
         });
     } 
-    if (url.includes("gp/product")) {
+    if (url.includes("gp/product") || url.includes("dp")) {
 
     //disable buy now
 
@@ -18,7 +18,17 @@ if (url.includes("amazon.ca")){
         document.getElementById("submit.buy-now").classList.remove("a-button-oneclick");
         document.getElementById("submit.buy-now-announce").innerHTML = 'Buy Now (Disabled)';
 
-    }else {
+        var unique_code = document.getElementById('amsDetailRightV2').getAttribute('data-detailpageasin');
+        if(confirm("Do you want to check the history prices of this item?")){
+            window.open(
+                `https://ca.camelcamelcamel.com/product/${unique_code}`,
+                '_blank'
+              )
+           
+         }else {//do nothing. This will fire if cancel is clicked.}
+        } }
+
+    else {
         chrome.runtime.sendMessage({
             action: 'updateIcon',
             value: 1
