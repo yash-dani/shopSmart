@@ -1,13 +1,19 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat:bold&display=swap');
 *
 {
-	margin: 0;
-	padding: 0;
+	margin: 10;
+	padding: 10;
 	font-family: 'Montserrat', sans-serif;
 	font-weight: 1000000;
 	line-weight: 10000;
 }
-
+.wholeThing 
+{
+	
+	padding: 3px 3px;
+	margin: 0px;
+	max-width: 225px;
+}
 img {
     float: left;
     margin-bottom: 30px;
@@ -41,6 +47,8 @@ label {
    border-radius: 50%;
    line-height: 5em;
 }
+
+
 
 .progress-circle:after{
     border: none;
@@ -86,7 +94,7 @@ label {
    width: 5em;
    height: 5em;
    border-radius: 50%;
-   border: 0.45em solid #53777A; /*The border is 0.35 but making it larger removes visual artifacts */
+   border: 0.45em solid Crimson; /*The border is 0.35 but making it larger removes visual artifacts */
    /*background-color: #4D642D;*/ /* for debug */
    box-sizing: border-box;
   
@@ -96,14 +104,22 @@ label {
    /*Progress bar for the first 50%, filling the whole right half*/
    position: absolute; /*needed for clipping*/
    clip: rect(0, 5em, 5em, 2.5em);
-   background-color: #53777A;
+   background-color: Crimson;
    border-radius: 50%;
    width: 5em;
    height: 5em;
 }
 .progress-circle:not(.over50) .first50-bar{ display: none; }
+.circleThing
+{
+	margin: 5px 20px;
+}
 
-
+.bottomText 
+{
+	font-size:10px;
+	margin: -30px 10px;
+}
 /* Progress bar rotation position */
 .progress-circle.p0 .value-bar { display: none; }
 .progress-circle.p1 .value-bar { transform: rotate(4deg); }

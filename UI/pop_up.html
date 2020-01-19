@@ -18,7 +18,7 @@
     text-decoration: none;
     display: inline-block;
     font-size: 14px;
-    margin: 4px 2px;
+    margin: 10px 16px;
     cursor: pointer;
     transition-duration: 0.4s;
   }
@@ -74,6 +74,7 @@
     display: inline-block;
     width: 30px;
     height: 17px;
+	margin: 15px 17px;
   }
 
   .switch input { 
@@ -132,6 +133,7 @@
 
 
 <body>
+  <div class="wholeThing">
   <img src='IMG/scotiabank-icon-red16.svg' id='ShopsmartIcon'>
   <p>ShopSmart Test Pop-up</p>
   <label class="switch">
@@ -139,16 +141,22 @@
     <span class="slider round"></span>
   </label>
   <br>
-  <div class="progress-circle p40">
-    <span class="text">40%</span>
+  
+  <div class="circleThing">
+  <div class="progress-circle p8">
+    <span class="text">$6</span>
     <div class="left-half-clipper">
        <div class="first50-bar"></div>
        <div class="value-bar"></div>
     </div>
+	<br>
+	<h5 class="bottomText">of budget left</h5>
+  </div>
   </div>
 
   <button class="button_animated" id='Scotiabank'>Go to Scotiabank</button>
   <script src="pop_up.js"></script>
+  </div>
 </body>
 
 </html>
