@@ -4,7 +4,7 @@
     "manifest_version": 2,
     "content_scripts": [
       {
-        "matches": ["https://www.amazon.ca/*"],
+        "matches": ["<all_urls>"],
         "js": ["content.js"]
       }
     ],
@@ -15,5 +15,7 @@
     "background": {
       "scripts": ["background.js"]
     },
-    "permissions": ["tabs"]
+    "permissions": ["<all_urls>", "tabs", "activeTab"], 
+    "icons": 
+    {"32" : "UI/Icons/default_icon.png"}
   }

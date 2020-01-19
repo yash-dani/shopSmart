@@ -7,6 +7,12 @@
 	font-weight: 1000000;
 	line-weight: 10000;
 }
+
+html 
+{
+    width: 265px; 
+    height: 175px; 
+}
 .wholeThing 
 {
 	

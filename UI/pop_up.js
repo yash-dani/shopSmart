@@ -5,3 +5,8 @@ document.getElementById("Scotiabank").onclick = function () {
       '_blank'
     )
 };
+
+chrome.browserAction.setIcon({
+              path : "/UI/Icons/default_icon.png"
+            });
+          
