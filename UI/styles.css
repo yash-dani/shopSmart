@@ -8,9 +8,31 @@
 	line-weight: 10000;
 }
 
+img {
+    float: left;
+    margin-bottom: 30px;
+    margin-top: 15px;
+}
+
+p {
+    float: left;
+    margin-top: 16px;
+    margin-left: 20px;
+    margin-bottom: 30px;
+}
+
+label {
+    float: left;
+    margin-top: 15px;
+    margin-left: 30px;
+    margin-bottom: 30px;
+}
+
+
 .progress-circle {
    font-size: 20px;
-   margin: 20px;
+   float: center;
+   margin: 30px;
    position: relative; /* so that children can be absolutely positioned */
    padding: 0;
    width: 5em;

@@ -1,0 +1,161 @@
+<html>
+<head>
+  <link href="styles.css" media="all" rel="stylesheet" />
+  <title>ShopSmart</title>
+</head>
+
+<style>
+  body,html {
+   font-size: 10px;
+}
+  .button_animated {
+    background-color: Crimson;
+    border: none;
+    color: white;
+    padding: 10px 24px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    margin: 4px 2px;
+    cursor: pointer;
+    transition-duration: 0.4s;
+  }
+
+  .button_animated:hover {
+    background-color: crimson; 
+    color: white;
+  }
+
+  .button_animated span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+  }
+
+  .button_animated span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+  }
+
+  .button_animated:hover span {
+    padding-right: 25px;
+  }
+
+  .button_animated:hover span:after {
+    opacity: 1;
+    right: 0;
+  }
+
+  .button_round{
+    background-color: 
+      White;
+    border: none;
+    color: Crimson;
+    padding: 5px 5px;
+    border-radius: 50%;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    margin: 4px 2px;
+    cursor: pointer;
+    transition-duration: 0.4s;
+  }
+
+  .switch {
+    position: relative;
+    display: inline-block;
+    width: 30px;
+    height: 17px;
+  }
+
+  .switch input { 
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 13px;
+    width: 13px;
+    left: 2px;
+    bottom: 2px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+
+  input:checked + .slider {
+    background-color: crimson;
+  }
+
+  input:focus + .slider {
+    box-shadow: 0 0 1px crimson;
+  }
+
+  input:checked + .slider:before {
+    -webkit-transform: translateX(13px);
+    -ms-transform: translateX(13px);
+    transform: translateX(13px);
+  }
+
+  /* Rounded sliders */
+  .slider.round {
+    border-radius: 17px;
+  }
+
+  .slider.round:before {
+    border-radius: 50%;
+  }
+</style>
+
+
+<body>
+  <img src='IMG/scotiabank-icon-red16.svg' id='ShopsmartIcon'>
+  <p>ShopSmart Test Pop-up</p>
+  <label class="switch">
+    <input type="checkbox">
+    <span class="slider round"></span>
+  </label>
+  <br>
+  <div class="progress-circle p40">
+    <span class="text">40%</span>
+    <div class="left-half-clipper">
+       <div class="first50-bar"></div>
+       <div class="value-bar"></div>
+    </div>
+  </div>
+
+  <button class="button_animated" id='Scotiabank'>Go to Scotiabank</button>
+  <script type="text/javascript">
+    document.getElementById("Scotiabank").onclick = function () {
+        //location.href = "https://www.scotiabank.com/ca/en/personal.html";
+        window.open(
+          'https://www.scotiabank.com/ca/en/personal.html',
+          '_blank'
+        )
+    };
+</script>
+</body>
+
+</html>
