@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+*
+{
+	margin: 0;
+	padding: 0;
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 1000000;
+}
+
+body 
+{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+	background: #101010;
+}
+
+.container .card
+{
+	position: relative;
+	width: 250px;
+	background: linear-gradient(0deg, #1b1b1b,#222,#1b1b1b);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 300px;
+    border-radius: 4px;
+	text-align: center;
+	overflow: hidden;
+	transition: 0.5s;
+}
+
+.contained .card:hover
+{
+	transform: translateY(-10px);
+	box-shadow: 0 15px 35px rgba(0,0,0,.5);
+}
+.container .card:before 
+{
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	heigth: 100%;
+	background: rgba(255,255,255,.03);
+	pointer-events: none;
+	z-index: 1;
+}
+
+svg
+{
+	position: relative;
+	width: 150px;
+	height: 150px;
+	z-index: 1000;
+}
+svg circle 
+{
+	width: 100%;
+	height: 100%;
+	fill: none;
+	stroke: #191919;
+	stroke-width: 10;
+	stroke-linecap: 10;
+	stroke-linecap: round;
+	transform: transplate(5px,5px);
+}
+svg circle:nth-child(2) 
+{
+	stroke-dasharray: 220;
+	stroke-dashoffset: 220;
+	
+}
+
+.card:nth-child(1) svg circle:nth-child(2) 
+{
+
+	stroke: #00ff43;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
